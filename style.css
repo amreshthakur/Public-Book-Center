@@ -1,0 +1,427 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --yellow-color: #ffda60;
+  --yellow-hover-color: #f9de85;
+}
+
+.service-container {
+  /* max-width: 1024px; */
+  margin: 0 auto;
+  padding: 5px;
+ /* This sets the border to be solid black */
+  border: 1px solid #000000; 
+
+}
+
+
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  margin: 16px 0;
+  text-align: center;
+}
+
+h3 {
+  line-height: 1.6;
+}
+
+.sub-heading {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  line-height: 2;
+}
+
+
+
+section {
+  padding: auto 20px;
+}
+
+.btn:hover {
+  background: var(--yellow-hover-color);
+  color: #000;
+}
+
+
+/* Header */
+.header-swiper .swiper {
+  height: 100%;
+  width: 100%;
+}
+
+.header-swiper .swiper-slide {
+  height: 60vh;
+}
+
+.header-swiper .swiper-slide .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  position: relative;
+  padding-top: 73px;
+}
+
+.header-swiper .swiper-slide .content::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header-swiper .swiper-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.header-swiper .swiper-slide .slide-title,
+.header-swiper .swiper-slide p {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1200ms ease-out, transform 900ms ease-out;
+}
+
+.header-swiper .swiper-slide.swiper-slide-active .slide-title,
+.header-swiper .swiper-slide.swiper-slide-active p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header-swiper .swiper-slide .slide-title {
+  font-size: 50px;
+  font-weight: bold;
+  z-index: 3;
+  text-align: center;
+}
+
+.header-swiper .swiper-slide p {
+  font-size: 20px;
+  z-index: 3;
+  transition-delay: 200ms;
+  text-align: center;
+}
+
+.header-swiper .swiper-button-next,
+.header-swiper .swiper-button-prev {
+  background: var(--yellow-color);
+  padding: 8px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.2;
+  transition: all 300ms ease;
+}
+
+.header-swiper .swiper-button-next:hover,
+.header-swiper .swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.header-swiper .swiper-button-next::after,
+.header-swiper .swiper-button-prev::after {
+  font-size: 20px;
+  color: #000;
+}
+
+/* Services Section */
+
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 45px;
+  gap: 60px;
+  border: 1px solid #000000; /* This sets the border to be solid black */
+  padding: 20px; /* Optional: Add padding inside the border */
+}
+
+
+.services-container .icon img {
+  height: 60px;
+  
+}
+
+.services-container .service {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.services-container .icon {
+  border: 1px solid #eee;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  transition: all 300ms ease;
+  border: 1px solid #000000; /* This sets the border to be solid black */
+
+}
+
+.services-container .icon:hover {
+  background: var(--yellow-color);
+}
+
+.services-container .service h3 {
+  margin: 4px 0;
+}
+
+.services-container .service p {
+  margin-top: 16px;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+/* About Section */
+
+#about {
+  padding: 0;
+}
+
+#about .content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+#about .content .left,
+#about .content .right {
+  flex: 1;
+}
+
+#about .content img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+#about h2 {
+  text-align: left;
+}
+
+#about .right {
+  padding-right: 32px;
+}
+
+/* Blog Section */
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.cards-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cards-container a {
+  color: #fff;
+  background: #333;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+
+/* Testimonials Section */
+
+#testimonials {
+  background: var(--yellow-color);
+}
+
+.testimonials-swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  padding: 30px;
+}
+
+.testimonials-swiper .swiper-slide p {
+  font-size: 24px;
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 800ms ease;
+}
+
+.testimonials-swiper .swiper-slide.swiper-slide-active p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonials-swiper .swiper-slide .name {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.testimonials-swiper .swiper-button-next,
+.testimonials-swiper .swiper-button-prev {
+  background: #eee;
+  width: 50px;
+  height: 50px;
+}
+
+.testimonials-swiper .swiper-button-next::after,
+.testimonials-swiper .swiper-button-prev::after {
+  color: #000;
+  font-size: 20px;
+}
+
+/* Smartphone */
+
+@media (max-width: 800px) {
+
+  /* Hero section */
+
+  .header-swiper .swiper-slide .slide-title {
+    font-size: 30px;
+  }
+
+  .header-swiper .swiper-slide .content {
+    padding-inline: 1px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  
+
+  section {
+    padding-inline: 30px;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  #about .content {
+    flex-direction: column;
+  }
+
+  #about .content img {
+    height: 300px;
+    object-fit: cover;
+    width: 100vw;
+  }
+
+  #about .right {
+    padding: 0 30px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+   .swiper-slide {
+    padding-inline: auto;
+    padding-block: 0;
+  }
+
+  .swiper-slide p {
+    font-size: 10px;
+  }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+  }
+
+ .swiper-slide .content {
+    padding-inline: 20px;
+  }
+
+
+
+
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 24px;
+  background: var(--yellow-color);
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+}
+
+
+
+/* ========================= Pdf ovlay on screen ============== */
+
+#pdf-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+
+#pdf-container {
+  width: 100%;
+  height: 100%;
+  max-width: 1380PX;
+  max-height: 650PX;
+  background: #f6f6f6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#pdf-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fefefe;
+  background-color: #000000;
+  border: 1px solid #000000;
+  padding: 10px 10px;
+  /* Adding a black border */
+}
+
+@media (max-width: 800px) {
+  /* #pdf-container {
+      width: 10%;
+      height: 100%;
+  } */
+
+}
+
+/* ========================= Pdf ovlay on screen ============== */
